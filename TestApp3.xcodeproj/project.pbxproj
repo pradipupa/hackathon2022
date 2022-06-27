@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8D69DB242868F8DE002968E4 /* AvailVehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D69DB232868F8DE002968E4 /* AvailVehicle.swift */; };
 		8D999D6C2868D27E00ADFBCC /* TestApp3App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D999D6B2868D27E00ADFBCC /* TestApp3App.swift */; };
 		8D999D6E2868D27E00ADFBCC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D999D6D2868D27E00ADFBCC /* ContentView.swift */; };
 		8D999D702868D27F00ADFBCC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D999D6F2868D27F00ADFBCC /* Assets.xcassets */; };
@@ -14,6 +15,9 @@
 		8D999D7D2868D27F00ADFBCC /* TestApp3Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D999D7C2868D27F00ADFBCC /* TestApp3Tests.swift */; };
 		8D999D872868D27F00ADFBCC /* TestApp3UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D999D862868D27F00ADFBCC /* TestApp3UITests.swift */; };
 		8D999D892868D27F00ADFBCC /* TestApp3UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D999D882868D27F00ADFBCC /* TestApp3UITestsLaunchTests.swift */; };
+		8D999D962868D31700ADFBCC /* Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D999D952868D31700ADFBCC /* Vehicle.swift */; };
+		8D999D982868D38800ADFBCC /* Vehicles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D999D972868D38800ADFBCC /* Vehicles.swift */; };
+		8D999D9A2868DA1200ADFBCC /* AddVehicleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D999D992868DA1200ADFBCC /* AddVehicleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8D69DB232868F8DE002968E4 /* AvailVehicle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailVehicle.swift; sourceTree = "<group>"; };
 		8D999D682868D27E00ADFBCC /* TestApp3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestApp3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D999D6B2868D27E00ADFBCC /* TestApp3App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestApp3App.swift; sourceTree = "<group>"; };
 		8D999D6D2868D27E00ADFBCC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -44,6 +49,9 @@
 		8D999D822868D27F00ADFBCC /* TestApp3UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestApp3UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D999D862868D27F00ADFBCC /* TestApp3UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestApp3UITests.swift; sourceTree = "<group>"; };
 		8D999D882868D27F00ADFBCC /* TestApp3UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestApp3UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		8D999D952868D31700ADFBCC /* Vehicle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vehicle.swift; sourceTree = "<group>"; };
+		8D999D972868D38800ADFBCC /* Vehicles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vehicles.swift; sourceTree = "<group>"; };
+		8D999D992868DA1200ADFBCC /* AddVehicleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddVehicleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +106,10 @@
 				8D999D6D2868D27E00ADFBCC /* ContentView.swift */,
 				8D999D6F2868D27F00ADFBCC /* Assets.xcassets */,
 				8D999D712868D27F00ADFBCC /* Preview Content */,
+				8D999D952868D31700ADFBCC /* Vehicle.swift */,
+				8D999D972868D38800ADFBCC /* Vehicles.swift */,
+				8D999D992868DA1200ADFBCC /* AddVehicleView.swift */,
+				8D69DB232868F8DE002968E4 /* AvailVehicle.swift */,
 			);
 			path = TestApp3;
 			sourceTree = "<group>";
@@ -257,6 +269,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D69DB242868F8DE002968E4 /* AvailVehicle.swift in Sources */,
+				8D999D982868D38800ADFBCC /* Vehicles.swift in Sources */,
+				8D999D9A2868DA1200ADFBCC /* AddVehicleView.swift in Sources */,
+				8D999D962868D31700ADFBCC /* Vehicle.swift in Sources */,
 				8D999D6E2868D27E00ADFBCC /* ContentView.swift in Sources */,
 				8D999D6C2868D27E00ADFBCC /* TestApp3App.swift in Sources */,
 			);
