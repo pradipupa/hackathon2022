@@ -18,6 +18,7 @@
 		8D999D962868D31700ADFBCC /* Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D999D952868D31700ADFBCC /* Vehicle.swift */; };
 		8D999D982868D38800ADFBCC /* Vehicles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D999D972868D38800ADFBCC /* Vehicles.swift */; };
 		8D999D9A2868DA1200ADFBCC /* AddVehicleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D999D992868DA1200ADFBCC /* AddVehicleView.swift */; };
+		8D9E7EF9286BDACC00BDEC75 /* BeaconDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9E7EF8286BDACC00BDEC75 /* BeaconDetector.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		8D999D952868D31700ADFBCC /* Vehicle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vehicle.swift; sourceTree = "<group>"; };
 		8D999D972868D38800ADFBCC /* Vehicles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vehicles.swift; sourceTree = "<group>"; };
 		8D999D992868DA1200ADFBCC /* AddVehicleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddVehicleView.swift; sourceTree = "<group>"; };
+		8D9E7EF8286BDACC00BDEC75 /* BeaconDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeaconDetector.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 				8D999D972868D38800ADFBCC /* Vehicles.swift */,
 				8D999D992868DA1200ADFBCC /* AddVehicleView.swift */,
 				8D69DB232868F8DE002968E4 /* AvailVehicle.swift */,
+				8D9E7EF8286BDACC00BDEC75 /* BeaconDetector.swift */,
 			);
 			path = TestApp3;
 			sourceTree = "<group>";
@@ -273,6 +276,7 @@
 				8D999D982868D38800ADFBCC /* Vehicles.swift in Sources */,
 				8D999D9A2868DA1200ADFBCC /* AddVehicleView.swift in Sources */,
 				8D999D962868D31700ADFBCC /* Vehicle.swift in Sources */,
+				8D9E7EF9286BDACC00BDEC75 /* BeaconDetector.swift in Sources */,
 				8D999D6E2868D27E00ADFBCC /* ContentView.swift in Sources */,
 				8D999D6C2868D27E00ADFBCC /* TestApp3App.swift in Sources */,
 			);
