@@ -10,6 +10,7 @@ import SwiftUI
 struct ContentView: View {
     
     @StateObject var vehicles = Vehicles()
+    @StateObject var detector = BeaconDetector()
     @State private var showingAddVehicle = false
     
     
@@ -24,6 +25,9 @@ struct ContentView: View {
                             HStack {
                                 Text(item.desc)
                                 Spacer()
+                                
+                                //TODO: Here draw the color based on distance
+                                //      detector.distance == .immediate
                                 Circle()
                                     .fill(.red)
                                     .frame(width: 20, height: 20)

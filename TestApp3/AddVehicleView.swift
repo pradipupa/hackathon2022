@@ -29,9 +29,10 @@ struct AddVehicleView: View {
                         let vehicle = Vehicle(id: currentUUID, desc: desc, token: token)
                         vehicles.pairedVehicles.append(vehicle)
 
-                        let index: Int? = vehicles.availableToPairedVehicles.firstIndex(where: {$0.id == currentUUID})
-                        vehicles.availableToPairedVehicles.remove(at: index!)
-                        dismiss()
+                        if let index = vehicles.availableToPairedVehicles.firstIndex(where: {$0.id == currentUUID}) {
+                            vehicles.availableToPairedVehicles.remove(at: index)
+                            dismiss()
+                        }
                     }
                     Button("Cancel") {
                         dismiss()
