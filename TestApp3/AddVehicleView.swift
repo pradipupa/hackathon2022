@@ -9,29 +9,38 @@ import SwiftUI
 
 struct AddVehicleView: View {
     @ObservedObject var vehicles: Vehicles
-    var currentUUID: UUID
+    //@ObservedObject var detector: BeaconDetector
     @Environment(\.dismiss) var dismiss
     
-    @State private var desc = ""
-    @State private var token = ""
-    @State private var id = UUID()
+    //@State private var addVehicleModel = AddVehicleModel()
+    @ObservedObject private var addVehicleModel = AddVehicleModel()
+    @State private var showingAlert = false
     
     var body: some View {
         NavigationView {
             Form {
-                TextField("Vehicle Description", text: $desc)
-                TextField("Token", text: $token)
+                TextField("Vehicle Description", text: $addVehicleModel.desc)
+                TextField("UUID", text: $addVehicleModel.uuidString)
+                TextField("Major", text: $addVehicleModel.major)
+                TextField("Minor", text: $addVehicleModel.minor)
             }
             .navigationTitle("Add Vehicle")
             .toolbar {
                 HStack {
                     Button("Save") {
-                        let vehicle = Vehicle(id: currentUUID, desc: desc, token: token)
-                        vehicles.pairedVehicles.append(vehicle)
-
-                        if let index = vehicles.availableToPairedVehicles.firstIndex(where: {$0.id == currentUUID}) {
-                            vehicles.availableToPairedVehicles.remove(at: index)
+                        if addVehicleModel.validate() {
+                            let vehicle = Vehicle(id: UUID.init(uuidString: addVehicleModel.uuidString)!, major: addVehicleModel.major, minor: addVehicleModel.minor, desc: addVehicleModel.desc)
+                            vehicles.registeredVehicles.append(vehicle)
                             dismiss()
+                        } else {
+                            showingAlert = true
+                        }
+                    }
+                    .alert("Erorr Encountered", isPresented: $showingAlert) {
+                        Button("OK", role: .cancel){}
+                    } message: {
+                        ForEach(addVehicleModel.brokenRules, id: \.id) { brokenRule in
+                            Text(brokenRule.message)
                         }
                     }
                     Button("Cancel") {
@@ -40,13 +49,11 @@ struct AddVehicleView: View {
                 }
             }
         }
-        
-        
     }
 }
 
 struct AddVehicle_Previews: PreviewProvider {
     static var previews: some View {
-        AddVehicleView(vehicles: Vehicles(), currentUUID: UUID())
+        AddVehicleView(vehicles: Vehicles())
     }
 }
