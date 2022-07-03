@@ -9,6 +9,8 @@ import Foundation
 
 struct Vehicle: Identifiable, Codable {
     let id: UUID
+    let major: String
+    let minor: String
     let desc: String
-    let token: String
+    
 }

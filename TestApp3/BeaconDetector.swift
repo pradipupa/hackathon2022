@@ -13,6 +13,11 @@ class BeaconDetector: NSObject, ObservableObject, CLLocationManagerDelegate  {
     var locationManager: CLLocationManager?
     @Published var lastDistance = CLProximity.unknown
     
+    //hardocde for now
+    var uuid = UUID(uuidString: "5A4BCFCE-174E-4BAC-A814-092E77F6B7E5")!
+    var major: CLBeaconMajorValue = 123
+    var minor: CLBeaconMinorValue = 456
+    
     override init() {
         super.init()
         
@@ -36,7 +41,7 @@ class BeaconDetector: NSObject, ObservableObject, CLLocationManagerDelegate  {
     func startScanning() {
         //hardocde for now
         let uuid = UUID(uuidString: "5A4BCFCE-174E-4BAC-A814-092E77F6B7E5")!
-        let constraint = CLBeaconIdentityConstraint(uuid: uuid, major: 123, minor: 456)
+        let constraint = CLBeaconIdentityConstraint(uuid: uuid, major: major, minor: minor)
         
         let beaconRegion = CLBeaconRegion(beaconIdentityConstraint: constraint, identifier: "MyBeacon")
         locationManager?.startMonitoring(for: beaconRegion)

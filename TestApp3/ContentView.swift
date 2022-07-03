@@ -15,33 +15,31 @@ struct ContentView: View {
     
     
     var body: some View {
-        var currentUUID = UUID()
+        
         VStack {
             Image("logo")
 
             NavigationView {
                 List {
-                    Section(header: Text("Paired")) {                    ForEach(vehicles.pairedVehicles) { item in
+                        ForEach(vehicles.registeredVehicles) { item in
                             HStack {
                                 Text(item.desc)
                                 Spacer()
-                                
+                                Text("Status:")
                                 //TODO: Here draw the color based on distance
                                 //      detector.distance == .immediate
                                 Circle()
                                     .fill(.red)
-                                    .frame(width: 20, height: 20)
-                            
+                                    .frame(width: 20, height: 20)                            
                             }
                         }
                         .onDelete(perform: removeVehicles)
-                    }
                     
-                    Section(header: Text("Ready to pair")) {
+                    
+/*                    Section(header: Text("Ready to pair")) {
                         ForEach(vehicles.availableToPairedVehicles) { item in
                                 HStack {
-                                    Button {
-                                        currentUUID = item.id
+                                    Button {                                        
                                         showingAddVehicle = true
                                     } label: {
                                         HStack {
@@ -55,23 +53,34 @@ struct ContentView: View {
                                 }
                         }
                     }
-                    
+ */
                 }
-                .navigationTitle("Vehicls")
+                .navigationTitle("Registered Vehicls")
+                .toolbar{
+                    ToolbarItem(placement: .primaryAction) {
+                        Button {
+                            showingAddVehicle = true
+                        } label: {
+                                Image(systemName: "plus")
+                        }
+                        .padding()
+                    }
+                }
                 .sheet(isPresented: $showingAddVehicle) {
-                    AddVehicleView(vehicles: vehicles, currentUUID: currentUUID)
+                    AddVehicleView(vehicles: vehicles)
                 }
             }
         }
     }
     
     func removeVehicles(at offsets: IndexSet) {
-        offsets.forEach { (i) in
+/*        offsets.forEach { (i) in
             let newVehicle = AvailVehicle(description:           vehicles.pairedVehicles[i].desc)
             vehicles.availableToPairedVehicles.append(newVehicle)
             
         }
-        vehicles.pairedVehicles.remove(atOffsets: offsets)
+ */
+        vehicles.registeredVehicles.remove(atOffsets: offsets)
     }
 }
 
