@@ -55,7 +55,7 @@ struct ContentView: View {
                     }
  */
                 }
-                .navigationTitle("Registered Vehicls")
+                .navigationTitle("Registered Vehicles")
                 .toolbar{
                     ToolbarItem(placement: .primaryAction) {
                         Button {
